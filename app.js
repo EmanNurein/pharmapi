@@ -100,14 +100,14 @@ const cors = require('cors');
 
 
      //PharmacyDetails
-        app.get('/details',(req,res) => {
+        app.get('/details/:id',(req,res) => {
             //let pharmId = Number(req.params.id);
             let pharmId = mongo.ObjectId(req.params.id)
             db.collection('pharmacy').find({_id:pharmId}).toArray((err,result) => {
                 if(err) throw err;
                 res.send(result)
+            })
         })
-     })
 
      //products
         app.get('/products',(req,res) => {
@@ -185,17 +185,17 @@ const cors = require('cors');
 
     //update orders
         app.put('/updateOrder/:id',(req,res) => {
+            console.log(">>>id",req.params.id)
+            console.log(">>>id",req.body)
             let oId = Number(req.params.id)
             // let oId = mongo.ObjectId(req.params.id);
             db.collection('orders').updateOne(
-                // {_id:oId},
-                {id:oId},
+                {_id:oId},
+                // {id:oId},
                 {$set:{
-                    "email":req.body.email,
-                    "address":req.body.address,
                     "status":req.body.status,
                     "bank_name":req.body.bank_name,
-                    "date":req.body.date,
+                     "date":req.body.date
                     
                 }},(err,result) => {
                     if(err) throw err

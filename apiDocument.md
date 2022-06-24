@@ -14,9 +14,9 @@
 
 # List of pharmacy wrt to city
 
-#http://localhost:9700/pharmacy/?state_id=1
+#http://localhost:9700/pharmacy/?stateId=1
 
-#https://pharm-project.herokuapp.com/pharmacy/?state_id=1
+#https://pharm-project.herokuapp.com/pharmacy/?stateId=1
 
 # List of productTypes
 
@@ -39,7 +39,7 @@
         (Body) [6]
         [
             {
-                "\_id": "626688d2c7d11798ac3a956b",
+                "_id": "626688d2c7d11798ac3a956b",
                 "pharmacy_id": 2,
                 "pharmacy_name": "Almek Nimer Pharmacy",
                 "location_id": 2,
@@ -118,12 +118,12 @@
 #<Body)
 
             {
-                "name": "Nada",
-                "email":"nada@gmail.com",
-                "address": "Almuhandseen Block No.30",
-                "phone": "092224578",
-                "cost": 2300,
-                "productItem":[3,6],
+                "name": "Nibras",
+                "email":"nibras@gmail.com",
+                "address": "Khartoum ",
+                "phone": "0123123856",
+                "cost": 6000,
+                "productItem":[1,5],
                 "status":"pending"
             }
 
@@ -132,12 +132,12 @@
 #(Body)
 
         {
-            "name": "Salma",
-            "email":"salma123@gmail.com",
-            "address": "Khartoum Bahri",
-            "phone": "0123123456",
-            "cost": 4000,
-            "productItem":[5,6],
+            "name": "Nibras",
+            "email":"nibras@gmail.com",
+            "address": "Khartoum ",
+            "phone": "0123123856",
+            "cost": 6000,
+            "productItem":[1,5],
             "status":"pending"
         }
 
@@ -151,7 +151,7 @@
 
 #http://localhost:9700/viewOrder?email=eman@gmail.com
 
-#https://pharm-project.herokuapp.com/viewOrder/?eman@gmail.com
+#https://pharm-project.herokuapp.com/viewOrder/?email=eman@gmail.com
 
 # Update order
 
@@ -161,7 +161,7 @@
 
         {
             "status":"In Transit",
-            "bankName":"Axis bank"
+            "bank_name":"Axis bank"
         }
 
 #(PUT) https://pharm-project.herokuapp.com/updateOrder/62575a0400178fa239ef724c
@@ -170,7 +170,7 @@
 
         {
             "status":"In Transit",
-            "bankName":"BlueVine"
+            "bank_name":"BlueVine"
         }
 
 # login Api
