@@ -190,12 +190,12 @@ const cors = require('cors');
             let oId = Number(req.params.id)
             // let oId = mongo.ObjectId(req.params.id);
             db.collection('orders').updateOne(
-                {_id:oId},
-                // {id:oId},
+                // {_id:oId},
+                {id:oId},
                 {$set:{
                     "status":req.body.status,
                     "bank_name":req.body.bank_name,
-                     "date":req.body.date
+                    "date":req.body.date
                     
                 }},(err,result) => {
                     if(err) throw err
