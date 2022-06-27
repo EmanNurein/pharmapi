@@ -184,14 +184,14 @@ const cors = require('cors');
 
 
     //update orders
-        app.put('/updateOrder/:id',(req,res) => {
+        app.put('/updateOrder/',(req,res) => {
             console.log(">>>id",req.params.id)
             console.log(">>>id",req.body)
             let oId = Number(req.params.id)
             // let oId = mongo.ObjectId(req.params.id);
             db.collection('orders').updateOne(
-                {_id:oId},
-                // {id:oId},
+                // {_id:oId},
+                {id:oId},
                 {$set:{
                     "status":req.body.status,
                     "bank_name":req.body.bank_name,
