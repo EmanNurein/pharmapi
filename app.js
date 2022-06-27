@@ -8,7 +8,7 @@ let port = process.env.PORT || 8230;
 // const mongoUrl = process.env.mongoUrl;
 // const mongoUrl = "mongodb://localhost:27017";
 // const mongoUrl = "process.env.mongoUrl";
-const mongoUrl = "mongodb+srv://eman:QT8LoVUWDt0uSVFu@cluster0.bvz0d.mongodb.net/emaapharmacy?retryWrites=true&w=majority";
+const mongoUrl = "mongodb+srv://eman:zBpbhFss67XFjl83@cluster0.bvz0d.mongodb.net/emaapharmacy?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
 // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
@@ -190,8 +190,8 @@ const cors = require('cors');
             let oId = Number(req.params.id)
             // let oId = mongo.ObjectId(req.params.id);
             db.collection('orders').updateOne(
-                // {_id:oId},
-                {id:oId},
+                {_id:oId},
+                // {id:oId},
                 {$set:{
                     "status":req.body.status,
                     "bank_name":req.body.bank_name,
