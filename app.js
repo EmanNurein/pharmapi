@@ -184,7 +184,7 @@ const cors = require('cors');
 
 
     //update orders
-        app.put('/updateOrder/',(req,res) => {
+        app.put('/updateOrder/:id',(req,res) => {
             console.log(">>>id",req.params.id)
             console.log(">>>id",req.body)
             let oId = Number(req.params.id)
