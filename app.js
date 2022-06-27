@@ -7,11 +7,10 @@ dotenv.config()
 let port = process.env.PORT || 8230;
 // const mongoUrl = process.env.mongoUrl;
 // const mongoUrl = "mongodb://localhost:27017";
-// const mongoUrl = "process.env.mongoUrl";
 const mongoUrl = "mongodb+srv://eman:zBpbhFss67XFjl83@cluster0.bvz0d.mongodb.net/emaapharmacy?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
 
 
 

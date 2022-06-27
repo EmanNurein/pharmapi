@@ -103,11 +103,11 @@
 
 #(POST) http://localhost:9700/productItem
 
-#(Body) [1,2,3]
+#(Body) [1,4,8]
 
 #(POST) https://pharm-project.herokuapp.com/productItem
 
-#(Body) [1,3,6]
+#(Body) [1,4,8]
 
 # Page 5
 
@@ -118,27 +118,38 @@
 #<Body)
 
             {
-                "name": "Nibras",
-                "email":"nibras@gmail.com",
-                "address": "Khartoum ",
-                "phone": "0123123856",
-                "cost": 6000,
-                "productItem":[1,5],
-                "status":"pending"
-            }
+            "name": "Amel",
+            "email": "amel@gmail.com",
+            "address": "Khartoum Bahri",
+            "phone": "0912234567",
+            "cost": 6000,
+            "productItem": [
+            1,
+            2
+            ],
+            "status": "pending",
+            "date": "1st of March",
+            "bank_name": "France"
+        }
+        ]
 
 #(POST) https://pharm-project.herokuapp.com/placeOrder
 
 #(Body)
 
         {
-            "name": "Nibras",
-            "email":"nibras@gmail.com",
-            "address": "Khartoum ",
-            "phone": "0123123856",
-            "cost": 6000,
-            "productItem":[1,5],
-            "status":"pending"
+            "_id": "62ba0cc8ec9d8f7c5720be24",
+            "id": 8262,
+            "pharmacy_name": "",
+            "name": "Amel",
+            "email": "amel@gmail.com",
+            "cost": 19000,
+            "phone": "0912234567",
+            "address": "Hon 30",
+            "productItem": "1,8",
+            "bank_name": "BlueVine",
+            "date": "1st of May",
+            "status": "In Transit"
         }
 
 # See all place order
@@ -155,23 +166,34 @@
 
 # Update order
 
-#(PUT) http://localhost:9700/updateOrder/62575a0400178fa239ef724c
+#(PUT) http://localhost:9700/updateOrder/2955
 
 #(Body)
 
         {
             "status":"In Transit",
-            "bank_name":"Axis bank"
+            "bank_name":"Axis bank",
+            "date":"Oct"
         }
 
-#(PUT) https://pharm-project.herokuapp.com/updateOrder/62575a0400178fa239ef724c
+#(PUT) https://pharm-project.herokuapp.com/updateOrder/2955
 
 #(Body)
 
         {
-            "status":"In Transit",
-            "bank_name":"BlueVine"
-        }
+                "_id": "62ba0cc8ec9d8f7c5720be24",
+                "id": 8262,
+                "pharmacy_name": "",
+                "name": "Amel",
+                "email": "amel@gmail.com",
+                "cost": 19000,
+                "phone": "0912234567",
+                "address": "Hon 30",
+                "productItem": "1,8",
+                "bank_name": "France",
+                "date": "1st of June",
+                "status": "In Progress"
+       }
 
 # login Api
 
@@ -188,10 +210,10 @@
 #(Body)
 
             {
-                name":"Ahmed Ali",
-                "email":"ahmed@hotmail.com",
-                "password":"ahmedali",
-                "phone":"0914542545",
+                "name":"Abdelrahman",
+                "email":"abdelrahman@hotmail.com",
+                "password":"1234567",
+                "phone":"0914442545",
                 "role":"user"
             }
 
@@ -200,10 +222,10 @@
 #(Body)
 
             {
-                name":"Ahmed Ali",
-                "email":"ahmed@hotmail.com",
-                "password":"ahmedali",
-                "phone":"0914542545",
+                "name":"Abdelrahman",
+                "email":"abdelrahman@hotmail.com",
+                "password":"1234567",
+                "phone":"0914442545",
                 "role":"user"
             }
 
@@ -214,8 +236,8 @@
 #(body)
 
             {
-                "email":"ahmed@hotmail.com",
-                "password":"ahmedali"
+                "email":"abdelrahman@hotmail.com",
+                "password":"1234567"
             }
 
 #(Response)=> {auth:true,token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9'}
@@ -225,8 +247,8 @@
 #(Body)
 
             {
-                "email":"ahmed@hotmail.com",
-                "password":"ahmedali"
+                "email":"abdelrahman@hotmail.com",
+                "password":"1234567"
             }
 
 #(Response) => {"auth": true, "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"}
