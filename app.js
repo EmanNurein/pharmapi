@@ -100,8 +100,8 @@ const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
 
      //PharmacyDetails
         app.get('/details/:id',(req,res) => {
-            //let pharmId = Number(req.params.id);
-            let pharmId = mongo.ObjectId(req.params.id)
+            let pharmId = Number(req.params.id);
+            // let pharmId = mongo.ObjectId(req.params.id)
             db.collection('pharmacy').find({_id:pharmId}).toArray((err,result) => {
                 if(err) throw err;
                 res.send(result)

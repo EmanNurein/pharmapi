@@ -87,9 +87,9 @@
 
 # Details of Pharmacy
 
-#http://localhost:9700/details/62933c2023f40402bd446241
+#http://localhost:9700/details/62b5b21ae9cdfe3f82a83687
 
-#https://pharm-project.herokuapp.com/details/62933c2023f40402bd446241
+#https://pharm-project.herokuapp.com/details/62b5b21ae9cdfe3f82a83687
 
 # Products on basis of pharmacy
 
